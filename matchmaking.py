@@ -8,7 +8,7 @@ import time
 import json
 
 browser = Browser()
-db.query("""SELECT * FROM `matchmaking` WHERE `matchmaking_last_seen` > DATE_ADD(NOW(), INTERVAL - 3000 SECOND)""")
+db.query("""SELECT * FROM `matchmaking` WHERE `matchmaking_last_seen` > DATE_ADD(NOW(), INTERVAL - 60 SECOND)""")
 
 matchmaking = {}
 for user in db.fetch_all():
